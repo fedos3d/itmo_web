@@ -7,3 +7,16 @@ code {
 blockquote {
     font-style: italic;
 }
+
+section {
+    border: 4px double black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+li {
+    list-style-type: square;
+}
+
+li li {
+    list-style-type: square;
+}
