@@ -8,15 +8,12 @@ blockquote {
     font-style: italic;
 }
 
-section {
-    border: 4px double black; /* Параметры границы */
-    background: #fc3; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-}
-li {
+ul {
     list-style-type: square;
 }
-
-li li {
-    list-style-type: square;
+aside {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+    float: right;
 }
