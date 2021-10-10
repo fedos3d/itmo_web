@@ -1,3 +1,9 @@
+body {
+    background-image: url("images/subtle_zebra_3d.png");
+    background-repeat: repeat;
+    background-size: initial;
+    font-size: 130%;
+}
 code {
     background-color: #eee;
     border-radius: 3px;
@@ -16,4 +22,64 @@ aside {
     padding: 10px;
     width: 200px;
     float: right;
+}
+.myheader {
+    font-family: "Pacifico", serif;
+    font-size: 120%;
+    line-height: 150%;
+    color: #3a3a3a;
+    #text-shadow: white 1px 1px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1%;
+    margin: 1%
+}
+.mynav {
+    font-family: courier, monospace;
+    padding: 1%;
+    margin: 1%;
+}
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+a:link {
+    color: #265301;
+}
+a:visited {
+    color: #437A16;
+}
+a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+}
+a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+}
+a:active {
+    background: #265301;
+    color: #CDFEAA;
+}
+main {
+    font-family: "Caveat", cursive;
+}
+footer {
+    font-family: "Orelega One", cursive;
+    text-align: center;
+}
+header h1 {
+    text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+del {
+    color: red;
+}
+aside {
+    font-size: 110%;
+    background-color: #BAE498;
+}
+section {
+    font-size: 100%;
+    #background-color: antiquewhite;
 }
