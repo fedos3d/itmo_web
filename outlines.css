@@ -1,0 +1,19 @@
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+blockquote {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: square;
+}
+aside {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+    float: right;
+}
