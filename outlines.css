@@ -120,7 +120,7 @@ article:hover, section:hover, aside:hover{
 }
 .thatrow {
     clear: both;
-    *zoom: 1;
+
 }
 .thatrow section {
     float: left;
