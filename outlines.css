@@ -93,7 +93,7 @@ section {
     background-color: rgba(222, 104, 174, 0.1);
     margin: 1%;
     border: 1rem solid;
-
+    padding-left: 1%
 }
 article {
     margin: 1%;
@@ -105,7 +105,7 @@ article, section, aside {
     transition: all .4s ease;
     border: 1rem solid;
 }
-article:hover, section:hover, aside:hover{
+article:hover, section:hover, aside:hover {
     border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
     box-shadow: 10px 10px rgba(0,0,0,.25);
 
@@ -151,4 +151,33 @@ pre {
 }
 #mypic {
     background-color: rgba(141, 104, 222, 0.87);
+}
+#upper_part {
+    display: flex;
+    flex-direction: column;
+}
+#middle_part {
+    display: flex;
+}
+#next_aside {
+    flex-grow: 1;
+}
+#kek_pic {
+    position: sticky;
+    top: 30px;
+    max-width: max-content;
+    max-height: 250px;
+    left: 34px;
+}
+@media screen and (max-width: 400px) {
+    .mynav {
+        display: flex;
+        flex-direction: column;
+    }
+    #next_aside {
+        display: none;
+    }
+    aside {
+        flex-grow: 1;
+    }
 }
