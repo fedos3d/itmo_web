@@ -257,6 +257,14 @@ pre {
     grid-row-end: 6;
 }
 .spamgif {
+    /*position: absolute;*/
     position: -webkit-sticky;
     position: sticky;
+    top: 1px;
+    text-align: right;
+}
+.spamgif img {
+    max-width: max-content;
+    max-height: max-content;
+    #top: 1px;
 }
