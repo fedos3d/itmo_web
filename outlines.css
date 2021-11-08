@@ -208,11 +208,18 @@ pre {
     #margin-left: 1%;
     margin: 2%;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
     #grid-column-gap: 20px;
     #grid-row-gap: 1em;
 }
+/*#table:nth-child(odd) {*/
+/*    background-color: rgba(101, 35, 222, 0.87);*/
+/*}*/
+/*#table:n(even) {*/
+/*    background-color: rgba(138, 231, 169, 0.87);*/
+/*}*/
+
 .column1 {
     background-color: rgba(141, 104, 222, 0.87);
     grid-column-start: 1;
@@ -263,8 +270,24 @@ pre {
     top: 1px;
     text-align: right;
 }
+
 .spamgif img {
     max-width: max-content;
     max-height: max-content;
     #top: 1px;
+}
+
+#gallery {
+    display: flex;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+    padding: 5px;
+    /*border: none*/
+    justify-content: space-around;
+}
+#gallery img {
+    border: 1rem solid;
+    max-width: 320px;
+    max-height: 240px;
+    margin: 5px;
 }
