@@ -243,8 +243,9 @@ function replaceChecked(kek) {
 function drawTable(lang, days, storedChecks) {
     var myNode = document.getElementById("results");
     myNode.innerHTML = '';
+    let bigtable = document.createElement('table')
     for (var i = 0; i < days; i++) {
-        let newTable = document.createElement('table')
+        let newTable = document.createElement('tbody')
         var headerrow = document.createElement('tr')
         var el = document.createElement('td')
         el.appendChild(document.createTextNode(weekdays[i].weekday))
@@ -302,8 +303,9 @@ function drawTable(lang, days, storedChecks) {
             }
             newTable.appendChild(row)
         }
-        document.getElementById("results").appendChild(newTable)
+        bigtable.appendChild(newTable)
     }
+    document.getElementById("results").appendChild(bigtable)
 
 }
 //here we start our html page:

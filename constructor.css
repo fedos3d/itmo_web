@@ -35,12 +35,12 @@ table, th, td {
     border:1px solid black;
 }
 table {
-    width: 100px;
+    /*width: 100px;*/
     border-radius: 5px;
     /*font-size: 12px;*/
     font-weight: normal;
     border-collapse: collapse;
-    /*width: 100%;*/
+    width: 100%;
     /*max-width: 100%;*/
     white-space: nowrap;
     background-color: white;
@@ -57,6 +57,6 @@ td {
 }
 
 #results {
-    margin: 10px 70px 70px;
+    /*margin: 10px 70px 70px;*/
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
