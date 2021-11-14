@@ -17,6 +17,11 @@ window.onload = function () {
         curelem.style.color = "red"
         curelem.style.border = "solid"
     }
+    else if (document.getElementById("constructor").getAttribute("data-nav") === "true") {
+        let curelem = document.getElementById("constructor")
+        curelem.style.color = "red"
+        curelem.style.border = "solid"
+    }
     let textNode = document.createTextNode("Load time: " + loadTime)
     let pNode = document.createElement('p').appendChild(textNode)
     let element = document.createElement("div").appendChild(pNode)
