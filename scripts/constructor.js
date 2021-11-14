@@ -1,20 +1,7 @@
-let textNode = document.createTextNode("ABOABABABABAB: ")
-let pNode = document.createElement('p').appendChild(textNode)
-let element = document.createElement("div").appendChild(pNode)
-
-
-
-
-
-
-// document.body.appendChild(element);
-const input = document.querySelector('input');
-const log = document.getElementById('values');
-
-
 const WeekType = Object.freeze({
     odd: "нечет",
-    even: "чет"
+    even: "чет",
+    all: "все"
 });
 
 //weekdays
@@ -86,6 +73,99 @@ var Linux = new Zan(new StudyTime("8:20", "9:50"), WeekType.even, '325',
 monday.push(Linux)
 var weekdays = []
 var weekday = new WorkDay(WeekdaysRU.Monday, monday)
+
+var Linux = new Zan(new StudyTime("10:00", "11:30"), WeekType.even, '325',
+    'Администрирование в ОС Linux/Linux operating system administration', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Шараева Кристина Витальевна', 'M33031')
+monday.push(Linux)
+var ML = new Zan(new StudyTime("11:40", "13:10"), WeekType.all, '285',
+    'Машинное обучение', 'Лекции',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+monday.push(ML)
+var WEB = new Zan(new StudyTime("13:30", "15:00"), WeekType.odd, '236',
+    'Web-программирование', 'Лабораторные занятия',
+    'Очно - дистанционный ', '-', 'M33031')
+monday.push(WEB)
+var WEB = new Zan(new StudyTime("15:20", "16:50"), WeekType.odd, '236',
+    'Web-программирование', 'Лабораторные занятия',
+    'Очно - дистанционный ', '-', 'M33031')
+monday.push(WEB)
+weekdays.push(weekday)
+//Let's fill out wednesday:
+var wednesday = []
+var weekday = new WorkDay(WeekdaysRU.Wednesday, wednesday)
+var WEB = new Zan(new StudyTime("11:40", "13:10"), WeekType.all, '100/1(усл) ',
+    'Web-программирование', 'Лекции',
+    'Очно - дистанционный ', 'Приискалов Роман Андреевич', 'M33031')
+wednesday.push(WEB);
+var ML = new Zan(new StudyTime("13:30", "15:00"), WeekType.odd, '239',
+    'Машинное обучение', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+wednesday.push(ML);
+var ML = new Zan(new StudyTime("15:20", "16:50"), WeekType.odd, '239',
+    'Машинное обучение', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+wednesday.push(ML)
+weekdays.push(weekday)
+//Let's fill out thursday
+var thursday = []
+var weekday = new WorkDay(WeekdaysRU.Thursday, thursday)
+var EN = new Zan(new StudyTime("08:20", "09:50"), WeekType.all, '3212',
+    'Иностранный язык в профессиональной деятельности', 'Практические занятия',
+    'Очно - дистанционный ', 'Немец Мария Сергеевна', 'АЯ-3IT-C2/1')
+thursday.push(EN)
+var EN = new Zan(new StudyTime("10:00", "11:30"), WeekType.all, '3212',
+    'Иностранный язык в профессиональной деятельности', 'Практические занятия',
+    'Очно - дистанционный ', 'Немец Мария Сергеевна', 'АЯ-3IT-C2/1')
+thursday.push(EN)
+var Linux = new Zan(new StudyTime("13:30", "15:00"), WeekType.all, '100/1(усл) ',
+    'Администрирование в ОС Linux/Linux operating system administration', 'Лекции',
+    'Очно - дистанционный ', 'Маятин Александр Владимирович', 'M33031')
+thursday.push(Linux)
+var UML = new Zan(new StudyTime("15:20", "16:50"), WeekType.all, '331',
+    'Анализ и проектирование на UML', 'Лекции',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+thursday.push(UML)
+weekdays.push(weekday)
+//Let's fill out friday
+var friday = []
+var weekday = new WorkDay(WeekdaysRU.Friday, friday)
+var UML = new Zan(new StudyTime("10:00", "11:30"), WeekType.odd, '236',
+    'Анализ и проектирование на UML', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+friday.push(UML)
+var UML = new Zan(new StudyTime("11:40", "13:10"), WeekType.odd, '236',
+    'Анализ и проектирование на UML', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Хлопотов Максим Валерьевич', 'M33031')
+friday.push(UML)
+var HISTORY = new Zan(new StudyTime("11:40", "13:10"), WeekType.even, '332',
+    'История (Наука и техника в истории цивилизации)', 'Лекции',
+    'Очно - дистанционный ', 'Васильев Андрей Владимирович', 'ИНТ 6')
+friday.push(HISTORY)
+var HISTORY = new Zan(new StudyTime("13:30", "15:00"), WeekType.even, '429',
+    'История (Наука и техника в истории цивилизации)', 'Практические занятия',
+    'Очно - дистанционный ', 'Васильев Андрей Владимирович', 'ИНТ 6.1')
+friday.push(HISTORY)
+weekdays.push(weekday)
+//Let's fill out saturday
+var saturday = []
+var weekday = new WorkDay(WeekdaysRU.Saturday, saturday)
+var PRIMAT = new Zan(new StudyTime("11:40", "13:10"), WeekType.even, '3408',
+    'Прикладная математика', 'Лекции',
+    'Очно - дистанционный ', 'Москаленко Мария Александровна', 'M33031')
+saturday.push(PRIMAT)
+var PRIMAT = new Zan(new StudyTime("13:30", "15:00"), WeekType.even, '2202',
+    'Прикладная математика', 'Лекции',
+    'Очно - дистанционный ', 'Москаленко Мария Александровна', 'M33031')
+saturday.push(PRIMAT)
+var PRIMAT = new Zan(new StudyTime("15:20", "16:50"), WeekType.odd, '1513',
+    'Прикладная математика', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Москаленко Мария Александровна', 'M33031')
+saturday.push(PRIMAT)
+var PRIMAT = new Zan(new StudyTime("17:00", "18:30"), WeekType.odd, '1513',
+    'Прикладная математика', 'Лабораторные занятия',
+    'Очно - дистанционный ', 'Москаленко Мария Александровна', 'M33031')
+saturday.push(PRIMAT)
 weekdays.push(weekday)
 
 
@@ -163,8 +243,13 @@ function replaceChecked(kek) {
 function drawTable(lang, days, storedChecks) {
     var myNode = document.getElementById("results");
     myNode.innerHTML = '';
-    for (var i = 0; i < weekdays.length; i++) {
+    for (var i = 0; i < days; i++) {
         let newTable = document.createElement('table')
+        var headerrow = document.createElement('tr')
+        var el = document.createElement('td')
+        el.appendChild(document.createTextNode(weekdays[i].weekday))
+        headerrow.appendChild(el)
+        newTable.appendChild(headerrow)
         var rowone = document.createElement('tr')
         for (var j = 0; j < storedChecks.length; j++) {
             el = document.createElement('th')
