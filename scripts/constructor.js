@@ -244,11 +244,12 @@ function drawTable(lang, days, storedChecks) {
     var myNode = document.getElementById("results");
     myNode.innerHTML = '';
     let bigtable = document.createElement('table')
-    for (var i = 0; i < days; i++) {
+    for (var i = 0; i < days && i < weekdays.length; i++) {
         let newTable = document.createElement('tbody')
         var headerrow = document.createElement('tr')
         var el = document.createElement('td')
         el.appendChild(document.createTextNode(weekdays[i].weekday))
+        el.setAttribute("class", "daytag")
         headerrow.appendChild(el)
         newTable.appendChild(headerrow)
         var rowone = document.createElement('tr')

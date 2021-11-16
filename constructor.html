@@ -29,20 +29,20 @@
     <form class="input_form" onsubmit="lolokek();return false">
         <div id="dayamount">
             <label>
-                <input type="number" id="amount_of_days" min=1 max=6 value="1">Кол-во дней:
+                Кол-во дней: <input type="number" id="amount_of_days" min=1 max=6 value="1">
             </label>
         </div>
-        <div id="languages">
-        <label>
-            <input name="lang" type="radio" value="English">English
-        </label>
-        <label>
-            <input name="lang" type="radio" value="Русский">Русский
-        </label>
-        <label>
-            <input name="lang" type="radio" value="汉语">汉语
-        </label>
-        </div>
+<!--        <div id="languages">-->
+<!--        <label>-->
+<!--            <input name="lang" type="radio" value="English">English-->
+<!--        </label>-->
+<!--        <label>-->
+<!--            <input name="lang" type="radio" value="Русский">Русский-->
+<!--        </label>-->
+<!--        <label>-->
+<!--            <input name="lang" type="radio" value="汉语">汉语-->
+<!--        </label>-->
+<!--        </div>-->
         <div id="columns_to_show">
             <label>
                 <input name="column" type="checkbox" value="time">Время занятий
@@ -69,7 +69,7 @@
         </div>
         <input type="submit" name="submit" value="Draw">
     </form>
-    <div id="results"></div>
+    <div id="results" style="overflow-x:auto;"></div>
 
 </main>
 <footer>
