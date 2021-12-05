@@ -183,7 +183,7 @@ function loadLocalStorageData() {
     return arr;
 }
 
-function lolokek() {
+function formsubmit() {
     let days = document.getElementById("amount_of_days").value
     let lang;
     let langs = document.getElementsByName("lang");
@@ -218,8 +218,8 @@ function updateLocalStorageData(lang, days, storedChecks) {
     window.localStorage.setItem("checks", JSON.stringify(storedChecks))
 }
 
-function replaceChecked(kek) {
-    switch (kek) {
+function replaceChecked(str) {
+    switch (str) {
         case "format":
             return "Формат занятий"
         case "tutor":
