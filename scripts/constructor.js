@@ -198,10 +198,10 @@ function formsubmit() {
         }
     }
     var checkedBoxes = document.querySelectorAll('input[name=column]:checked');
-    console.log("days: " + days)
-    console.log("lang: " + lang)
-    console.log("checked: " + checkedBoxes)
-    console.log("length fo checked: " + checkedBoxes.length)
+    // console.log("days: " + days)
+    // console.log("lang: " + lang)
+    // console.log("checked: " + checkedBoxes)
+    // console.log("length fo checked: " + checkedBoxes.length)
     var checked = []
     for (var i = 0; i < checkedBoxes.length; i++) {
         // console.log(checkedBoxes[i].value)
@@ -307,8 +307,25 @@ function drawTable(lang, days, storedChecks) {
         bigtable.appendChild(newTable)
     }
     document.getElementById("results").appendChild(bigtable)
-
 }
+function tickChecked () {
+    var arr = loadLocalStorageData()
+    lang = arr[0]
+    days = arr[1]
+    storedChecks = arr[2]
+    storedChecks.forEach(function (chec) {
+        document.querySelectorAll("#columns_to_show input").forEach(function (el) {
+            if (el.value === chec) {
+                el.setAttribute("checked", "checked")
+            }
+        })
+    })
+    // console.log(days)
+    document.querySelectorAll("#dayamount input").forEach( function (el) {
+        el.value = days
+    })
+}
+
 //here we start our html page:
 
 let lang
@@ -318,8 +335,7 @@ var arr = loadLocalStorageData()
 lang = arr[0]
 days = arr[1]
 storedChecks = arr[2]
-console.log(lang)
+tickChecked()
 if (storedChecks !== undefined) {
-    console.log("lolokek")
     drawTable(lang, days, storedChecks)
 }
