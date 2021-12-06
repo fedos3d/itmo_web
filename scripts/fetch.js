@@ -17,7 +17,18 @@ const fetchAPI = () => {
         .then((response) => response.json())
         .then(json => {
             console.log(json);
-            document.getElementById('results').innerHTML = json
+
+            let result = document.getElementById('results');
+            result.innerHTML = '';
+
+            json.forEach((item) => {
+                let paragraph = document.createElement('p');
+                let text = document.createTextNode(item.name);
+                paragraph.appendChild(text);
+                result.appendChild(paragraph);
+            });
+
+
         })
         .catch((error) => {
             console.log('error: ' + error);
