@@ -2,12 +2,13 @@ let before_loadtime = new Date().getTime();
 window.onload = function () {
     let aftr_loadtime = new Date().getTime();
     let loadTime = (aftr_loadtime - before_loadtime) / 1000
-    document.querySelectorAll("[data-nav]").forEach(function(el) {
+    document.querySelectorAll("div.mynav > a").forEach(function(el) {
         if (el.href === document.location.href) {
             el.style.color = "red"
             el.style.border = "solid"
         }
     })
+    // document.getElementsByTagName('a').forEach
     let textNode = document.createTextNode("Load time: " + loadTime)
     let pNode = document.createElement('p').appendChild(textNode)
     let element = document.createElement("div").appendChild(pNode)
