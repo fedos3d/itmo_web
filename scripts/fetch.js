@@ -1,9 +1,9 @@
 function filter (i) {
     let num = 5
     if ((num % 2) == 0) {
-        return i.id <= 5
+        return i.id < 5
     } else {
-        return i.id >= 5
+        return i.id > 5
     }
 }
 const fetchAPI = () => {
@@ -17,18 +17,14 @@ const fetchAPI = () => {
         .then((response) => response.json())
         .then(json => {
             console.log(json);
-
             let result = document.getElementById('results');
             result.innerHTML = '';
-
-            json.forEach((item) => {
+            json.filter(filter).forEach((item) => {
                 let paragraph = document.createElement('p');
                 let text = document.createTextNode(item.name);
                 paragraph.appendChild(text);
                 result.appendChild(paragraph);
             });
-
-
         })
         .catch((error) => {
             console.log('error: ' + error);
