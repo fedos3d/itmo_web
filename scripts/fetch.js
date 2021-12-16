@@ -19,10 +19,21 @@ const fetchAPI = () => {
             let result = document.getElementById('results');
             result.innerHTML = '';
             json.filter(filter).forEach((item) => {
+                let div = document.createElement('div');
+                div.setAttribute("class", "comment")
+                let h4 = document.createElement("h4");
+                let id = document.createElement("span");
+                let name = document.createTextNode(item.name);
+                let comment_id = document.createTextNode(", comment_id: " + item.postId);
+                id.appendChild(comment_id);
+                h4.appendChild(name);
+                h4.appendChild(id);
+                div.appendChild(h4);
                 let paragraph = document.createElement('p');
-                let text = document.createTextNode("comment_id: " + item.id +", " + item.body);
+                let text = document.createTextNode(item.body);
                 paragraph.appendChild(text);
-                result.appendChild(paragraph);
+                div.appendChild(paragraph)
+                result.appendChild(div);
             });
         })
         .catch((error) => {
