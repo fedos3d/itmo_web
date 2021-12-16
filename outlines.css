@@ -385,7 +385,11 @@ pre {
     color: #ffcdcd;
     font-weight: bold
 }
-.comment span {
+.comment_id {
     color: #f69494;
     font-style: italic;
+}
+.mailbox {
+    color: rgba(0, 0, 0, 0.81);
+    font-style: normal;
 }
