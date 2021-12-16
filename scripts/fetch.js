@@ -1,19 +1,18 @@
 function filter (i) {
-    let num = 5
-    if ((num % 2) == 0) {
-        return i.id < 5
-    } else {
-        return i.id > 5
+    let max = 20
+    let min = 5
+    let num = Math.floor(Math.random() * (max - min) + min);
+    console.log(num)
+    if ((i.id % num) === 0) {
+        return i.id
     }
 }
 const fetchAPI = () => {
-    // var temp = document.getElementsByTagName("template")[0];
-    // var clon = temp.content.cloneNode(true);
     let loader = '<div id="preloader">\n' +
         '  <div id="loader"></div>\n' +
         '</div>'
     document.getElementById('results').innerHTML = loader;
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/comments')
         .then((response) => response.json())
         .then(json => {
             console.log(json);
@@ -21,7 +20,7 @@ const fetchAPI = () => {
             result.innerHTML = '';
             json.filter(filter).forEach((item) => {
                 let paragraph = document.createElement('p');
-                let text = document.createTextNode(item.name);
+                let text = document.createTextNode("comment_id: " + item.id +", " + item.body);
                 paragraph.appendChild(text);
                 result.appendChild(paragraph);
             });
